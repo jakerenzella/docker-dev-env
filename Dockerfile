@@ -33,6 +33,8 @@ RUN apt-get update \
         ninja-build \
         ccache \
         zsh \
+        # For compiling 32bit applications on 64 bit machines
+        gcc-multilib \
     #
     # [Optional] Update UID/GID if needed
     && if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
